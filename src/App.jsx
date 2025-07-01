@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import Search from "./components/search";
 
 const App = () => {
+
+  const [searchTerm, setsearchTerm] = useState('');
+
   return (
     <main>
       <div className="pattern" />
@@ -11,7 +15,7 @@ const App = () => {
           <h1 className="capitalize">Find <span className="text-gradient">Movies</span> you'll like easily.</h1>
         </header>
 
-        <p>Search</p>
+        <Search searchTerm={searchTerm} setsearchTerm={setsearchTerm}/>
       </div>
     </main>
   );
